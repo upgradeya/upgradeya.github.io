@@ -98,9 +98,12 @@ textarea {
 
 html{
     background:#141312 url("../img/bg.jpg") repeat-x top center;
+    font: 1.5em/140% Times, serif;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+    -webkit-font-smoothing: antialiased;
 }
 body{
-    color:#c8c8c8;
+    color:#f0f0f0;
 }
 
 #page{
@@ -117,12 +120,75 @@ a:hover{
     text-decoration: none;
     color:white;
 }
+.divider{
+    background:url("../img/divider.png") no-repeat center;
+}
+h2{
+    text-transform: uppercase;
+    font-size:0.55em;
+    padding:0;
+    margin:0;
+    letter-spacing: 0.06em;
+}
+section{
+    padding-bottom:50px;
+}
+section#about{
+    padding:30px 0 0;
+}
+section ul{
+    display: inline-block;
+    padding: 25px 0 0;
+    margin: 0;
+    font-size: 0.88em;
+    line-height: 110%;
+    vertical-align: top;
+    width: 26%;
+}
+ul li{
+    list-style: none;
+    list-style-image: none;
+}
+section#pricing,
+section#contact{
+    color:#c8c8c8;
+    font-size:0.88em;
+    line-height:130%;
+}
+div.sub-section{
+    display:inline-block;
+    vertical-align: middle;
+    padding:10px 0 0;
+}
+div.sub-section img{
+    border:8px solid #0f0e0d;
+}
+div#main{
+    padding:0 10px;
+}
+div#dave p,
+div#jake p{
+    font-size:0.7em;
+    line-height:140%;
+    padding:20px 10px 0;
+}
+div#dave p{
+    text-align:right;
+    float:right;
+}div#dave img{
+    float:right;
+}
+div#jake p{
+    text-align:left;
+    float:left;
+}div#jake img{
+    float:left;
+}
 
-
-
-
-
-
+section#footer{
+    font-size:0.6em;
+    color:#707070;
+}
 
 
 
