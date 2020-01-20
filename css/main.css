@@ -1,387 +1,84 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*! Custom Styles */
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+html, body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
 }
 
-html {
-    font-size: 1em;
-    line-height: 1.4;
-}
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+@media (max-width: 576px) {
+  html {
+    font-size: 0.75rem;
+  }
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+@media (max-width: 1200px) and (min-width: 992px) {
+  html {
+    font-size: 0.75rem;
+  }
 }
 
-/*
- * A better looking default horizontal rule
- */
+.link-color-1 {
+    color: #4124ab;
+}
+.link-color-2 {
+    color: #008cb2;
+}
 
-hr {
+.bg-fill {
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 75%;
+    display: flex;
+    max-width: 1400px;
+}
+
+.company-box {
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    padding: 50px 15px;
+    margin: 20px 0;
+}
+
+.company-box img {
+    width: 70%;
+    color: #333;
+}
+
+.company-box .content {
+    margin: 40px auto 0;
+    width: 80%;
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    border-top: 1px solid #aaa;
+    padding: 30px 0 20px;
+    font-size: 1.2em;
 }
 
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-html{
-    background:#141312 url("../img/bg.jpg") repeat-x top center;
-    font: 1.5em/140% Times, serif;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
-    -webkit-font-smoothing: antialiased;
-}
-body{
-    color:#f0f0f0;
-}
-
-#page{
-    width:996px;
-    margin:auto;
-    text-align:center;
-}
-a{
-    color:#b78a42;
-    text-decoration: none;
-    transition:all 0.2s;
-}
-a:hover{
-    text-decoration: none;
-    color:white;
-}
-.divider{
-    background:url("../img/divider.png") no-repeat center;
-}
-h2{
-    text-transform: uppercase;
-    font-size:0.55em;
-    padding:0;
-    margin:0;
-    letter-spacing: 0.06em;
-}
-section{
-    padding-bottom:50px;
-}
-section#about{
-    padding:30px 0 0;
-}
-section ul{
-    display: inline-block;
-    padding: 25px 0 0;
-    margin: 0;
-    font-size: 0.88em;
-    line-height: 110%;
-    vertical-align: top;
-    width: 26%;
-}
-ul li{
-    list-style: none;
-    list-style-image: none;
-}
-section#pricing,
-section#contact{
-    color:#c8c8c8;
-    font-size:0.88em;
-    line-height:130%;
-}
-div.sub-section{
-    display:inline-block;
-    vertical-align: middle;
-    padding:10px 0 0;
-}
-div.sub-section img{
-    border:8px solid #0f0e0d;
-}
-div#main{
-    padding:0 10px;
-}
-div#dave p,
-div#jake p{
-    font-size:0.7em;
-    line-height:140%;
-    padding:20px 10px 0;
-}
-div#dave p{
-    text-align:right;
-    float:right;
-}div#dave img{
-    float:right;
-}
-div#jake p{
-    text-align:left;
-    float:left;
-}div#jake img{
-    float:left;
-}
-
-section#footer{
-    font-size:0.6em;
-    color:#707070;
-}
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
+.company-box .content span.skill {
     display: block;
-    width: 0;
-    height: 150%;
+    font-size: 1.45em;
+    font-weight: 700;
+    padding: 0 0 15px;
 }
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
+.company-box .content span.location {
+    padding-right: 30px;
 }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.footer {
     position: absolute;
-    width: 1px;
+    bottom: 15px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 7px;
+    opacity: 0.7;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
