@@ -7,18 +7,6 @@ html, body {
     letter-spacing: 0.01em;
 }
 
-@media (max-width: 576px) {
-  html {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 992px) {
-  html {
-    font-size: 0.75rem;
-  }
-}
-
 .link-color-1 {
     color: #4124ab;
 }
@@ -44,7 +32,7 @@ html, body {
     text-align: center;
     background: rgba(255,255,255,0.9);
     padding: 50px 15px;
-    margin: 20px 0;
+    margin: 20px 0 0;
 }
 
 .company-box img {
@@ -82,3 +70,29 @@ html, body {
     opacity: 0.7;
 }
 
+@media (max-width: 576px) {
+    html {
+        font-size: 0.75rem;
+    }
+    .company-box .content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .bg-fill {
+        height: auto;
+    }
+    .company-box {
+        padding: 30px 15px;
+    }
+    .company-box .content {
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    html {
+        font-size: 0.75rem;
+    }
+}
