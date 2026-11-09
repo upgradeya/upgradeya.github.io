@@ -1,0 +1,10 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Future local tooling
+node_modules/
+dist/
+.cache/
