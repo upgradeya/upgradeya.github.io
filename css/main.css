@@ -1,0 +1,177 @@
+:root {
+  --void: #03040c;
+  --navy: #081126;
+  --violet: #5b35ff;
+  --blue: #168cff;
+  --highlight: #d9e7ff;
+  --footer: rgba(235, 242, 255, 0.72);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  background: var(--void);
+  color: var(--highlight);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+#field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stage {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+.stage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 42%, rgba(91, 53, 255, 0.22), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 62% 58%, rgba(22, 140, 255, 0.16), transparent 55%),
+    linear-gradient(180deg, #081126 0%, #03040c 100%);
+  animation: atmosphere 32s ease-in-out infinite alternate;
+}
+
+.logo {
+  margin: 0;
+  width: min(680px, 78vw);
+  position: relative;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.logo-mark {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(120deg, #5b35ff, #168cff, #d9e7ff, #5b35ff);
+  background-size: 220% 220%;
+  mask-image: url("../assets/upgradeya-logo.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../assets/upgradeya-logo.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  filter: drop-shadow(0 0 18px rgba(91, 53, 255, 0.35)) drop-shadow(0 0 28px rgba(22, 140, 255, 0.22));
+  animation:
+    logo-in 500ms ease-out 150ms forwards,
+    logo-shift 28s linear infinite;
+  opacity: 0;
+}
+
+@supports not ((-webkit-mask-image: url("../assets/upgradeya-logo.png")) or (mask-image: url("../assets/upgradeya-logo.png"))) {
+  .logo-mark { display: none; }
+  .logo img {
+    animation: logo-in 500ms ease-out 150ms forwards;
+    filter: drop-shadow(0 0 18px rgba(91, 53, 255, 0.35));
+    opacity: 0;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+  opacity: 0;
+  animation: footer-in 450ms ease-out 500ms forwards;
+}
+
+.tagline {
+  margin: 0 0 0.45rem;
+  letter-spacing: 0.38em;
+  font-size: clamp(0.72rem, 1.6vw, 0.92rem);
+  font-weight: 500;
+  color: var(--footer);
+}
+
+.email {
+  color: var(--footer);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-size: clamp(0.8rem, 1.7vw, 0.95rem);
+  outline: none;
+}
+
+.email:hover,
+.email:focus-visible {
+  color: var(--blue);
+}
+
+.email:focus-visible {
+  box-shadow: 0 0 0 2px rgba(22, 140, 255, 0.7);
+  border-radius: 2px;
+}
+
+@keyframes atmosphere {
+  from { filter: hue-rotate(0deg) saturate(1); }
+  to { filter: hue-rotate(18deg) saturate(1.08); }
+}
+
+@keyframes logo-in {
+  from { opacity: 0.35; filter: drop-shadow(0 0 0 transparent); }
+  to { opacity: 1; }
+}
+
+@keyframes logo-shift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@keyframes footer-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 720px) {
+  .logo { width: 78vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage::before,
+  .logo img,
+  .footer {
+    animation: none;
+  }
+  .logo img,
+  .logo-mark,
+  .footer {
+    opacity: 1;
+  }
+  #field { display: none; }
+}

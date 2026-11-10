@@ -4,7 +4,7 @@ A fast, minimal replacement for the current [UpgradeYa](https://upgradeya.com/) 
 
 ## Status
 
-Design phase only. No production page has been built or deployed.
+Signal Field prototype is live for review at `/splash/` on UYI v2's port. Not yet the public upgradeya.com replacement.
 
 ## Approved intent to preserve
 
