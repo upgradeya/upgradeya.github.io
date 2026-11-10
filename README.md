@@ -4,7 +4,15 @@ A fast, minimal replacement for the current [UpgradeYa](https://upgradeya.com/) 
 
 ## Status
 
-Signal Field prototype is live for review at `/splash/` on UYI v2's port. Not yet the public upgradeya.com replacement.
+Signal Field staging is live for review at `/splash/` on UYI v2's port. It is not yet the public `upgradeya.com` replacement. The repository root is the deployable static site; pushes to `main` auto-deploy to the staging route.
+
+## Run locally
+
+```bash
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:8765/`. Run the regression suite with `npm test`.
 
 ## Approved intent to preserve
 

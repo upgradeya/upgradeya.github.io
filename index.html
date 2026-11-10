@@ -1,38 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03040c">
+  <meta name="description" content="UpgradeYa — it is not too late.">
+  <meta name="color-scheme" content="dark">
+
   <title>UpgradeYa</title>
-  <meta name="description" content="UpgradeYa">
   <link rel="canonical" href="https://upgradeya.com/">
-  <meta name="theme-color" content="#03040C">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2303040c'/%3E%3Cpath d='M18 14v25c0 8 5 13 14 13s14-5 14-13V14h-8v24c0 5-2 7-6 7s-6-2-6-7V14z' fill='%235b35ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/main.css">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://upgradeya.com/">
   <meta property="og:site_name" content="UpgradeYa">
   <meta property="og:title" content="UpgradeYa">
-  <meta property="og:description" content="UpgradeYa">
-  <meta property="og:image" content="docs/concept-frame.png">
+  <meta property="og:description" content="It is not too late.">
+  <meta property="og:image" content="https://upgradeya.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="UpgradeYa over a blue and violet signal field">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="UpgradeYa">
-  <meta name="twitter:description" content="UpgradeYa">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
-  <link rel="icon" href="assets/upgradeya-logo.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/upgradeya-logo.png">
-  <link rel="stylesheet" href="css/main.css">
+  <meta name="twitter:description" content="It is not too late.">
+  <meta name="twitter:image" content="https://upgradeya.com/assets/og-image.png">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
 </head>
 <body>
-  <canvas id="field" aria-hidden="true"></canvas>
-  <main class="stage">
-    <h1 class="logo">
-      <span class="logo-mark" aria-hidden="true"></span>
-      <img src="assets/upgradeya-logo.png" alt="UpgradeYa" width="640" height="160">
-    </h1>
-    <footer class="footer">
-      <p class="tagline">ITS NOT TOO LATE</p>
-      <a class="email" href="mailto:admin@upgradeya.com">admin@upgradeya.com</a>
-    </footer>
+  <div class="atmosphere" aria-hidden="true">
+    <canvas id="signal-field" aria-hidden="true"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="hero">
+    <div class="brand-mark" role="img" aria-label="UpgradeYa">
+      <img class="brand-fallback" src="assets/upgradeya-logo.png" width="816" height="163" alt="">
+      <span class="brand-gradient" aria-hidden="true"></span>
+    </div>
   </main>
-  <script src="js/signal-field.js" defer></script>
+
+  <footer class="footer">
+    <p>ITS NOT TOO LATE</p>
+    <a href="mailto:admin@upgradeya.com">admin@upgradeya.com</a>
+  </footer>
+
+  <script type="module" src="js/signal-field.js"></script>
 </body>
 </html>
