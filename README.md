@@ -14,6 +14,18 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8765/`. Run the regression suite with `npm test`.
 
+## Deployment
+
+- `origin/main` is the canonical Gitea source and staging deployment.
+- `github/master` is the public GitHub Pages deployment at [upgradeya.com](https://upgradeya.com/).
+- Routine pushes go only to Gitea. Publishing to the public site is an explicit action:
+
+```bash
+./scripts/publish.sh
+```
+
+The publish script refuses dirty, untested, or non-fast-forward releases. The root `CNAME` file must remain `upgradeya.com` so GitHub Pages retains the custom domain.
+
 ## Approved intent to preserve
 
 - Full-screen mystery and professionalism
