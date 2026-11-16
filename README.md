@@ -4,7 +4,7 @@ A fast, minimal replacement for the current [UpgradeYa](https://upgradeya.com/) 
 
 ## Status
 
-Signal Field staging is live for review at `/splash/` on UYI v2's port. It is not yet the public `upgradeya.com` replacement. The repository root is the deployable static site; pushes to `main` auto-deploy to the staging route.
+Signal Field is live at [upgradeya.com](https://upgradeya.com/) and also auto-deploys to the private TTMF staging route from `origin/main`. The repository root is the deployable static site; public releases are promoted explicitly to `github/master` with `scripts/publish.sh`.
 
 ## Run locally
 

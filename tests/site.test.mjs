@@ -28,6 +28,14 @@ test('site is self-contained and avoids third-party runtime dependencies', async
   assert.match(html, /<script type="module" src="js\/signal-field\.js"><\/script>/);
 });
 
+test('site uses the standalone UpgradeYa mark for browser icons', async () => {
+  const html = await read('index.html');
+
+  assert.match(html, /<link rel="icon" href="favicon\.ico" sizes="any">/);
+  assert.match(html, /<link rel="icon" type="image\/png" sizes="32x32" href="assets\/favicon-32\.png">/);
+  assert.match(html, /<link rel="apple-touch-icon" sizes="180x180" href="assets\/apple-touch-icon\.png">/);
+});
+
 test('layout keeps the logo centered and protects the footer safe area', async () => {
   const css = await read('css/main.css');
 
@@ -127,6 +135,10 @@ test('required first-party assets exist', () => {
   for (const path of [
     'assets/upgradeya-logo.png',
     'assets/og-image.png',
+    'assets/favicon-32.png',
+    'assets/favicon-192.png',
+    'assets/apple-touch-icon.png',
+    'favicon.ico',
     'css/main.css',
     'js/signal-field.js',
   ]) {
